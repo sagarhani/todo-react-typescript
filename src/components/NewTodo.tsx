@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "./NewTodo.css";
 
 type NewTodoProps = {
   onAddTodo: (title: string) => void;
@@ -14,9 +15,11 @@ export const NewTodo: React.FunctionComponent<NewTodoProps> = props => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="todo-input">Todo Title</label>
-      <input type="text" id="todo-input" ref={titleInputRef} />
-      <button type="submit">Submit</button>
+      <div className="form-control">
+        <label htmlFor="todo-input">Todo Title</label>
+        <input type="text" id="todo-input" ref={titleInputRef} />
+        <button type="submit">Submit</button>
+      </div>
     </form>
   );
 };

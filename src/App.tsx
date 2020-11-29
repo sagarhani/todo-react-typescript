@@ -20,7 +20,6 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h3>Todo App</h3>
       <NewTodo onAddTodo={addTodoHandler} />
       <TodoList items={todos} onDeleteTodo={deleteTodoHandler} />
     </div>
